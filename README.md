@@ -12,7 +12,7 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semest
              <li>Caso contrário, o sistema deverá sinalizar "Acesso Negado" e realizar o reconhecimento novamente, permitindo que seja feito um total de 3 tentativas seguidas, logo, caso a identificação falhe as 3 vezes durante o intervalo, o sistema deverá ser bloqueado e acionado um alarme sonoro.
 </li>
   </ul>
-  <li>Com relação ao fechamento </li>
+  <li>Com relação ao fechamento do cofre, este deve ser feito pelo mesmo mecanismo de abertura. No entanto, seu acionamento pode ocorrer de duar formas: manual ou automático. O primeiro deverá ocorrer por meio de um botão na interface do cofre. Já o segundo, ocorrerá quando o software identificar que o cofre se encontra aberto há mais tempo que um limite de tempo estabelecido pelo usuário. </li>
   <li>O sistema deve ser capaz de registrar novos rostos no banco de dados “Pessoas Autorizadas”, bem como remover algum rosto armazenado anteriormente. Tal processo será autorizado apenas se executado pelo proprietário do produto.</li>
 </ul></p>
 
@@ -22,7 +22,7 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semest
              <li>Com relação ao reconhecimento de um rosto não autorizado ("falso positivo"), a confiabilidade do sistema deve ser a mais alta possível.</li>
   </ul>
   <li>O sistema de visão computacional deve ser capaz de reconhecer se o rosto é real (3D). Caso identifique rostos em 2D (fotos, imagens projetadas, etc), deve desconsiderá-los.</li>
-  <li>O sistema deve possuir uma interface usuário-máquina intuitiva, que auxilie o usuário com o posicionamento com rosto por meio de um display. Deve também informar caso o sistema falhe em reconhecer um rosto autorizado, dando a opção ao usuário em repetir o processo (e o número de tentativas). Além disso, o acionamento para o reconhecimento será feito por meio de um botão contido nesta interface.</li>
+  <li>O sistema deve possuir uma interface usuário-máquina intuitiva, que auxilie o usuário com o posicionamento com rosto por meio de um display, além de um menu de configurações para banco de dados e tempo de fechamento automático. Deve também informar caso o sistema falhe em reconhecer um rosto autorizado, dando a opção ao usuário em repetir o processo (e o número de tentativas). Além disso, o acionamento para o reconhecimento será feito por meio de um botão contido nesta interface.</li>
   <li>O processo de captura de imagem para armazenamento no banco de dados deve seguir os requisitos da norma ISO/IEC 19794-5.
 </li>
 </ul></p>
