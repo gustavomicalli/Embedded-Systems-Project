@@ -8,11 +8,13 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semest
 <h3> Requisitos Funcionais </h3>
 <p><ul>
     <li>O sistema, ao ser acionado, deve ser capaz de capturar uma imagem por meio de sensoriamento de imagem. Em seguida, este deverá identificar a presença de rostos na imagem obtida, comparando-os com um banco de dados de “Pessoas Autorizadas”.</li><ul>
-             <li>Caso o rosto identificado corresponda ao de alguém autorizado, o sistema deverá acionar o motor, responsável pela abertura mecânica do cofre.</li>
+             <li>Caso o rosto identificado corresponda ao de alguém autorizado, o sistema deverá acionar o motor, responsável pela abertura mecânica da trava do cofre.</li>
              <li>Caso contrário, o sistema deverá sinalizar "Acesso Negado" e realizar o reconhecimento novamente, permitindo que seja feito um total de 3 tentativas seguidas, logo, caso a identificação falhe as 3 vezes durante o intervalo, o sistema deverá ser bloqueado e acionado um alarme sonoro.
 </li>
   </ul>
-  <li>Com relação ao fechamento do cofre, este deve ser feito pelo mesmo mecanismo de abertura. No entanto, seu acionamento pode ocorrer de duar formas: manual ou automático. O primeiro deverá ocorrer por meio de um botão na interface do cofre. Já o segundo, ocorrerá quando o software identificar que o cofre se encontra aberto há mais tempo que um limite de tempo estabelecido pelo usuário. </li>
+  <li>Com relação a abertura da porta do cofre, uma vez que foi feita a abertura mecânica da trava, será feita manualmente pelo usuário.
+  <li>Com relação ao fechamento da porta do cofre, seu acionamento pode ocorrer de duar formas: manual ou automático. O primeiro deverá ocorrer por meio de um botão na interface do cofre. Já o segundo, ocorrerá quando o software identificar que o cofre se encontra aberto há mais tempo que um limite de tempo estabelecido pelo usuário. </li>
+  <li>O fechamento da trava do cofre ocorrerá por um sensor de presença de objeto uma vez constatada que a porta está fechada.
   <li>O sistema deve ser capaz de registrar novos rostos no banco de dados “Pessoas Autorizadas”, bem como remover algum rosto armazenado anteriormente. Tal processo será autorizado apenas se executado pelo proprietário do produto.</li>
 </ul></p>
 
@@ -23,6 +25,7 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semest
   </ul>
   <li>O sistema de visão computacional deve ser capaz de reconhecer se o rosto é real (3D). Caso identifique rostos em 2D (fotos, imagens projetadas, etc), deve desconsiderá-los.</li>
   <li>O sistema deve possuir uma interface usuário-máquina intuitiva, que auxilie o usuário com o posicionamento com rosto por meio de um display, além de um menu de configurações para banco de dados e tempo de fechamento automático. Deve também informar caso o sistema falhe em reconhecer um rosto autorizado, dando a opção ao usuário em repetir o processo (e o número de tentativas). Além disso, o acionamento para o reconhecimento será feito por meio de um botão contido nesta interface.</li>
+  <li>O sensor utilizado para o fechamento da trava do cofre será um sensor capacitivo.
   <li>O processo de captura de imagem para armazenamento no banco de dados deve seguir os requisitos da norma ISO/IEC 19794-5.
 </li>
 </ul></p>
