@@ -1,7 +1,7 @@
 # Smart Safe Box Project
 Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semestre de 2020) do Curso de Engenharia Mecatrônica EESC-USP
 <h2> Descrição </h2>
-![Alt Text](https://user-images.githubusercontent.com/64747785/82112787-cbaebf80-9726-11ea-87b2-587ccfb65b05.jpg)
+![alt text] (https://user-images.githubusercontent.com/64747785/82112787-cbaebf80-9726-11ea-87b2-587ccfb65b05.jpg)
 <p> Este projeto consiste no desenvolvimento de um sistema de segurança em forma de cofre inteligente, cuja permissão de acesso é feita por meio de reconhecimento facial. Conforme idealizado, seu funcionamento se baseará no uso de câmeras conectadas a placa BeagleBone Black, responsável por processar e analisar as imagens obtidas; dependendo do resultado, um controlador executará a abertura do cofre através do acionamento de um motor; além disso, será utilizada comunicação CAN para ligação da placa ao controlador. </p>
 
 <h2> Requisitos </h2>
