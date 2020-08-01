@@ -10,11 +10,23 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semest
 </li>
 </ul></p>
 
+<h2> Materiais </h2>
+<p><ul>
+    
+  <li>Beagle Bone Black Wireless</li>
+  <li>Câmera </li>
+  <li>Display 
+  <li>Sensor Capacitivo
+  <li>Driver motor L298N 
+  <li>Motor de passo Nema 17
+</li>
+</ul></p>
+
 
 
 <h2> Descrição </h2>
 <img src="https://user-images.githubusercontent.com/64747785/82112787-cbaebf80-9726-11ea-87b2-587ccfb65b05.jpg">
-<p> Este projeto consiste no desenvolvimento de um sistema de segurança em forma de cofre inteligente, cuja permissão de acesso é feita por meio de reconhecimento facial. Conforme idealizado, seu funcionamento se baseará no uso de câmeras conectadas a placa BeagleBone Black, responsável por processar e analisar as imagens obtidas; dependendo do resultado, um controlador executará a abertura do cofre através do acionamento de um motor; além disso, será utilizada comunicação CAN para ligação da placa ao controlador. </p>
+<p> Este projeto consiste no desenvolvimento de um sistema de segurança em forma de cofre inteligente, cuja permissão de acesso é feita por meio de reconhecimento facial. Conforme idealizado, seu funcionamento se baseará no uso de câmeras conectadas a placa BeagleBone Black, responsável por processar e analisar as imagens obtidas; dependendo do resultado, um controlador executará a abertura do cofre através do acionamento de um motor; além disso, será utilizada comunicação CAN para ligação da placa ao controlador. A plataforma executará o OpenCV para processar e reconhecer as imagens capturadas em movimento utilizando-se do sistema operacional open source Linux para a interface entre aplicação do usuário e hardware. Além disso, a comunicação CAN garantirá simplicidade, robustez e confiabilidade para a transmissão desses dados. </p>
 
 <h2> Requisitos </h2>
 
