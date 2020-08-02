@@ -15,7 +15,7 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semest
     
   <li>Beagle Bone Black Wireless</li>
   <li>Câmera </li>
-  <li>Display 
+  <li>Display LCD4 Cape
   <li>Sensor Capacitivo
   <li>Driver motor L298N 
   <li>Motor de passo Nema 17
