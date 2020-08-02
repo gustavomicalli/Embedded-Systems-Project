@@ -54,3 +54,15 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semest
   <li>O processo de captura de imagem para armazenamento no banco de dados deve seguir os requisitos da norma ISO/IEC 19794-5.
 </li>
 </ul></p>
+
+<h2> Possíveis soluções para os requisitos: </h2>
+<p><ul>
+    
+  <li>Utilização do algoritmo Viola Jones em conjunto com o algoritmo LBD (Local Binary Patterns) para a detecção de faces, ambos combinados garantem baixa taxa de falso positivo e elevada taxa de acerto.</li>
+  <li>Utilização do algoritmo Autofaces para o reconhecimento facial, o qual é é a vetorização e a captação de um conjunto de autovetores para a coleção das caracteristicas da imagem </li>
+  <li>
+  <li>
+  <li> 
+  <li>
+</li>
+</ul></p>
