@@ -55,13 +55,14 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semest
 </li>
 </ul></p>
 
+
+
 <h2> Possíveis soluções para os requisitos: </h2>
 <p><ul>
     
   <li>Utilização do algoritmo Viola Jones em conjunto com o algoritmo LBD (Local Binary Patterns) para a detecção de faces, ambos combinados garantem baixa taxa de falso positivo e elevada taxa de acerto.</li>
-  <li>Utilização do algoritmo Autofaces para o reconhecimento facial, o qual é é a vetorização e a captação de um conjunto de autovetores para a coleção das caracteristicas da imagem </li>
-  <li>
-  <li>
+  <li>Utilização do algoritmo Autofaces para o reconhecimento facial, o qual é é a vetorização e a captação de um conjunto de autovetores para a coleção das caracteristicas da imagem. </li>
+  <li>Considerando uma distância máxima entre a porta e o cofre de 15mm para a ativação da trava o sensor capacitivo a ser utilizado foi o CM30-3015NC, o qual possui distância sensorial de 15 mm, e distância operacional de 0-30mm.
   <li> 
   <li>
 </li>
