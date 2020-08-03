@@ -38,7 +38,8 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semest
     </li>
   </ul>
   <li>Com relação a abertura da porta do cofre, uma vez que foi feita a abertura mecânica da trava, será feita manualmente pelo usuário.
-  <li>Com relação ao fechamento da porta do cofre, seu acionamento pode ocorrer de duar formas: manual ou automático. O primeiro deverá ocorrer por meio de um botão na interface do cofre. Já o segundo, ocorrerá quando o software identificar que o cofre se encontra aberto há mais tempo que um limite de tempo estabelecido pelo usuário. </li>
+  <li>Com relação ao fechamento da porta do cofre, seu acionamento será de forma manual. Após identificado o fechamento da porta, o software executará o código de fechamento da trava pelo motor.
+ </li>
   <li>O fechamento da trava do cofre ocorrerá por um sensor de presença de objeto uma vez constatada que a porta está fechada.
   <li>O sistema deve ser capaz de registrar novos rostos no banco de dados “Pessoas Autorizadas”, bem como remover algum rosto armazenado anteriormente. Tal processo será autorizado apenas se executado pelo proprietário do produto.</li>
 </ul></p>
