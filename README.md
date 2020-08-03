@@ -34,8 +34,8 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semest
 <p><ul>
     <li>O sistema, ao ser acionado, deve ser capaz de capturar uma imagem por meio de sensoriamento de imagem. Em seguida, este deverá identificar a presença de rostos na imagem obtida, comparando-os com um banco de dados de “Pessoas Autorizadas”.</li><ul>
              <li>Caso o rosto identificado corresponda ao de alguém autorizado, o sistema deverá acionar o motor, responsável pela abertura mecânica da trava do cofre.</li>
-             <li>Caso contrário, o sistema deverá sinalizar "Acesso Negado" e realizar o reconhecimento novamente, permitindo que seja feito um total de 3 tentativas seguidas, logo, caso a identificação falhe as 3 vezes durante o intervalo, o sistema deverá ser bloqueado e acionado um alarme sonoro.
-</li>
+             <li>Caso contrário, o sistema deverá executar as tentativas de reconhecimento 3 vezes e sinalizar "Acesso Negado" com o desligamento do Display caso nenhuma das 3 tentativas tenham sucesso.
+    </li>
   </ul>
   <li>Com relação a abertura da porta do cofre, uma vez que foi feita a abertura mecânica da trava, será feita manualmente pelo usuário.
   <li>Com relação ao fechamento da porta do cofre, seu acionamento pode ocorrer de duar formas: manual ou automático. O primeiro deverá ocorrer por meio de um botão na interface do cofre. Já o segundo, ocorrerá quando o software identificar que o cofre se encontra aberto há mais tempo que um limite de tempo estabelecido pelo usuário. </li>
