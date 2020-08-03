@@ -1,5 +1,5 @@
 # Smart Safe Box Project
-Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1o semestre de 2020) do Curso de Engenharia Mecatrônica EESC-USP
+Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1º semestre de 2020) do Curso de Engenharia Mecatrônica EESC-USP
 
 <h2> Integrantes </h2>
 <p><ul>
