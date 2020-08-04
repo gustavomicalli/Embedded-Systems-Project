@@ -37,10 +37,9 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1º semes
              <li>Caso contrário, o sistema deverá executar as tentativas de reconhecimento 3 vezes e sinalizar "Acesso Negado" com o desligamento do Display caso nenhuma das 3 tentativas tenham sucesso.
     </li>
   </ul>
-  <li>Com relação a abertura da porta do cofre, uma vez que foi feita a abertura mecânica da trava, será feita manualmente pelo usuário.
-  <li>Com relação ao fechamento da porta do cofre, seu acionamento será de forma manual. Após identificado o fechamento da porta, o software executará o código de fechamento da trava pelo motor.
+  <li>Com relação a abertura da porta do cofre, uma vez que foi feita a abertura mecânica da trava, o usuário terá um tempo determinado para a abertura da porta manualmente.
+  <li>Com relação ao fechamento da porta do cofre, seu acionamento será de forma manual. Após identificado o fechamento da porta por um sensor de presença, o software executará o código de fechamento da trava pelo motor.
  </li>
-  <li>O fechamento da trava do cofre ocorrerá por um sensor de presença de objeto uma vez constatada que a porta está fechada.
   <li>O sistema deve ser capaz de registrar novos rostos no banco de dados “Pessoas Autorizadas”, bem como remover algum rosto armazenado anteriormente. Tal processo será autorizado apenas se executado pelo proprietário do produto.</li>
 </ul></p>
 
@@ -50,8 +49,8 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1º semes
              <li>Com relação ao reconhecimento de um rosto não autorizado ("falso positivo"), a confiabilidade do sistema deve ser a mais alta possível.</li>
   </ul>
   <li>O sistema de visão computacional deve ser capaz de reconhecer se o rosto é real (3D). Caso identifique rostos em 2D (fotos, imagens projetadas, etc), deve desconsiderá-los.</li>
-  <li>O sistema deve possuir uma interface usuário-máquina intuitiva, que auxilie o usuário com o posicionamento com rosto por meio de um display, além de um menu de configurações para banco de dados e tempo de fechamento automático. Deve também informar caso o sistema falhe em reconhecer um rosto autorizado, dando a opção ao usuário em repetir o processo (e o número de tentativas). Além disso, o acionamento para o reconhecimento será feito por meio de um botão contido nesta interface.</li>
-  <li>O sensor utilizado para o fechamento da trava do cofre será um sensor capacitivo.
+  <li>O sistema deve possuir uma interface usuário-máquina intuitiva, que auxilie o usuário com o posicionamento com rosto por meio de um display, além de um menu de configurações para banco de dados. Deve também informar caso o sistema falhe em reconhecer um rosto autorizado, dando a opção ao usuário em repetir o processo (e o número de tentativas). Além disso, o acionamento para o reconhecimento será feito por meio de um botão contido nesta interface.</li>
+  <li>O sensor utilizado para o fechamento da trava do cofre será um sensor capacitivo com um tempo de espera de 10 segundos após a abertura para nova leitura.
   <li>O processo de captura de imagem para armazenamento no banco de dados deve seguir os requisitos da norma ISO/IEC 19794-5.
 </li>
 </ul></p>
