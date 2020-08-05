@@ -30,23 +30,6 @@ def fullstep(pins, pin_index):
     GPIO.output(pins[(pin_index+1) % 4], GPIO.LOW)
     GPIO.output(pins[(pin_index+2) % 4], GPIO.LOW)
 
-class Sensor:
-    """
-    Classe responsável pela definição do sensor
-    """
-
-    def __init__(self):
-        #Sem presença = False / Presença = True
-        self.__estado = False
-
-
-    def setEstado(self, estado):
-        self.__estado = estado
-
-
-    def getEstado(self):
-        return self.__estado
-
 class Motor(object):
 """ 
 Classe responsável pela definição do motor
@@ -103,3 +86,28 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    
+class Sensor:
+    """
+    Classe responsável pela definição do sensor
+    """
+
+    def __init__(self):
+        #Sem presença = False / Presença = True
+        self.__estado = False
+
+
+    def setEstado(self, estado):
+        self.__estado = estado
+
+
+    def getEstado(self):
+        return self.__estado
+    
+class Porta:
+    """
+    Classe responsável pela definição da porta do cofre
+    """
+    
+    
