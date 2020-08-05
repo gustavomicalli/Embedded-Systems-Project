@@ -1,3 +1,7 @@
+"""
+Dependência: Adafruit_BBIO
+"""
+
 from __future__ import division
 import Adafruit_BBIO.GPIO as GPIO
 import time
