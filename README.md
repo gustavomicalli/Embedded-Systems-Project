@@ -61,7 +61,6 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1º semes
 <p><ul>
     
   <li>Utilização do "Deep Residual Learning for Image Recognition" garantindo uma precisão de 98%, em conjunto com o openCV e duas bibliotecas adicionais: "dlib" e "face_recognition".</li>
-  <li>Utilização do algoritmo Autofaces para o reconhecimento facial, o qual é é a vetorização e a captação de um conjunto de autovetores para a coleção das caracteristicas da imagem. </li>
   <li>A câmera a ser utilizada no projeto é a webcam Logitech C920 Pro, uma vez que esta apresenta qualidade de imagem satisfatória para reconhecimento fácil, boa durabilidade e custo relativamente baixo.</li>
   <li>Será utilizado um display LCD4 Cape como interface de comunicação usuário-máquina. Este foi escolhido devido a sua compatibilidade com a BBB, durabilidade, preço e tamanho propício para a aplicação.</li>
   <li>Considerando uma distância máxima entre a porta e o cofre de 15mm para a ativação da trava o sensor capacitivo a ser utilizado foi o CM30-3015NC, o qual possui distância sensorial de 15 mm, e distância operacional de 0-30mm.</li>
