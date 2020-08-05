@@ -60,7 +60,7 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1º semes
 <h2> Possíveis soluções para os requisitos: </h2>
 <p><ul>
     
-  <li>Utilização do algoritmo Viola Jones em conjunto com o algoritmo LBD (Local Binary Patterns) para a detecção de faces, ambos combinados garantem baixa taxa de falso positivo e elevada taxa de acerto.</li>
+  <li>Utilização do "Deep Residual Learning for Image Recognition" garantindo uma precisão de 98%, em conjunto com o openCV e duas bibliotecas adicionais: "dlib" e "face_recognition".</li>
   <li>Utilização do algoritmo Autofaces para o reconhecimento facial, o qual é é a vetorização e a captação de um conjunto de autovetores para a coleção das caracteristicas da imagem. </li>
   <li>A câmera a ser utilizada no projeto é a webcam Logitech C920 Pro, uma vez que esta apresenta qualidade de imagem satisfatória para reconhecimento fácil, boa durabilidade e custo relativamente baixo.</li>
   <li>Será utilizado um display LCD4 Cape como interface de comunicação usuário-máquina. Este foi escolhido devido a sua compatibilidade com a BBB, durabilidade, preço e tamanho propício para a aplicação.</li>
