@@ -1,6 +1,3 @@
-# USAGE
-# python encode_faces.py --dataset dataset --encodings encodings.pickle
-
 # import the necessary packages
 from imutils import paths
 import face_recognition
@@ -23,17 +20,11 @@ args = vars(ap.parse_args())
 print("[INFO] quantifying faces...")
 imagePaths = list(paths.list_images(args["dataset"]))
 
-# initialize the list of known encodings and known names
+# initialize the list of known encodings
 knownEncodings = []
-knownNames = []
 
 # loop over the image paths
 for (i, imagePath) in enumerate(imagePaths):
-	# extract the person name from the image path
-	print("[INFO] processing image {}/{}".format(i + 1,
-		len(imagePaths)))
-	name = imagePath.split(os.path.sep)[-2]
-
 	# load the input image and convert it from RGB (OpenCV ordering)
 	# to dlib ordering (RGB)
 	image = cv2.imread(imagePath)
@@ -52,11 +43,10 @@ for (i, imagePath) in enumerate(imagePaths):
 		# add each encoding + name to our set of known names and
 		# encodings
 		knownEncodings.append(encoding)
-		knownNames.append(name)
 
-# dump the facial encodings + names to disk
+# dump the facial encodings to disk
 print("[INFO] serializing encodings...")
-data = {"encodings": knownEncodings, "names": knownNames}
+data = {"encodings": knownEncodings}
 f = open(args["encodings"], "wb")
 f.write(pickle.dumps(data))
 f.close()
