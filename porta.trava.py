@@ -138,5 +138,9 @@ class Porta:
                 self.sensor.setEstado(True)
                 self.motor.setEstado(False)
                 self.__estadoPorta = False
+                
+     def clean(self):
+		self.motor.stop()
+		GPIO.cleanup()
 
     
