@@ -48,6 +48,7 @@ Projeto desenvolvido para a discplina de Sistemas Embarcados (SEM0544, 1º semes
   </ul>
   <li>O sistema de visão computacional deve ser capaz de reconhecer se o rosto é real (3D). Caso identifique rostos em 2D (fotos, imagens projetadas, etc), deve desconsiderá-los.</li>
   <li>O sistema deve possuir uma interface usuário-máquina intuitiva, que auxilie o usuário com o posicionamento com rosto por meio de um display, além de um menu de configurações para banco de dados. Deve também informar caso o sistema falhe em reconhecer um rosto autorizado, desligando o display automaticamente.</li>
+  <li>Caso seja detectado algum movimento estranho ou o cofre tente ser aberto por uma face não reconhecida, é enviado um email de alerta para o proprietário com foto da câmera do cofre tirada no horário do acontecido.</li>
     <li>O sensor utilizado para o fechamento da trava do cofre será um sensor capacitivo.</li>
   <li>O processo de captura de imagem para armazenamento no banco de dados deve seguir os requisitos da norma ISO/IEC 19794-5.
 </li>
