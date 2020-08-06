@@ -7,7 +7,7 @@ def reconhecer():
 	import cv2
 	import os
 
-	# construção da analise de argumentos e analise
+	# construção da analise de argumentos
 	ap = argparse.ArgumentParser()
 	ap.add_argument("-i", "--dataset", required=True,
 		help="path to input directory of faces + images")
@@ -17,7 +17,7 @@ def reconhecer():
 		help="face detection model to use: either `hog` or `cnn`")
 	args = vars(ap.parse_args())
 
-	# pega os caminhos para as imagens de entrada no banco de dados
+	# seleciona os caminhos para as imagens de entrada no banco de dados
 	print("[INFO] quantifying faces...")
 	imagePaths = list(paths.list_images(args["dataset"]))
 
