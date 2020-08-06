@@ -49,7 +49,7 @@ while True:
 	encodings = face_recognition.face_encodings(rgb, boxes)
 
 	# loop over the recognized faces
-	for ((top, right, bottom, left), name) in zip(boxes, names):
+	for (top, right, bottom, left) in zip(boxes):
 		# rescale the face coordinates
 		top = int(top * r)
 		right = int(right * r)
@@ -73,6 +73,7 @@ while True:
 	if args["display"] > 0:
 		cv2.imshow("Frame", frame)
 		key = cv2.waitKey(1) & 0xFF
+		print("[INFO] Successful Acess!")
 
 		# if the `q` key was pressed, break from the loop
 		if key == ord("q"):
