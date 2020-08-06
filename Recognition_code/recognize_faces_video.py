@@ -7,7 +7,7 @@ import pickle
 import time
 import cv2
 
-# construção da analise de argumentos e analise
+# construção da analise de argumentos
 ap = argparse.ArgumentParser()
 ap.add_argument("-e", "--encodings", required=True,
 	help="path to serialized db of facial encodings")
@@ -31,7 +31,7 @@ time.sleep(2.0)
 
 # loop sobre os quadros do arquivo de vídeo
 while True:
-	# pega o quadro do vídeo em questão
+	# seleciona o quadro do vídeo em questão
 	frame = vs.read()
 	
 	# converte o quadro de entrada de  BGR para RGB e o redimensiona para uma largura de 750 pixels(para aumentar a velocidade de processamento)
