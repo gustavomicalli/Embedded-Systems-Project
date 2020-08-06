@@ -1,5 +1,5 @@
 def reconhecer():
-	# import the necessary packages
+	# importa as bibliotecas necessárias
 	from imutils import paths
 	import face_recognition
 	import argparse
@@ -7,7 +7,7 @@ def reconhecer():
 	import cv2
 	import os
 
-	# construct the argument parser and parse the arguments
+	# construção da analise de argumentos e analise
 	ap = argparse.ArgumentParser()
 	ap.add_argument("-i", "--dataset", required=True,
 		help="path to input directory of faces + images")
@@ -17,35 +17,32 @@ def reconhecer():
 		help="face detection model to use: either `hog` or `cnn`")
 	args = vars(ap.parse_args())
 
-	# grab the paths to the input images in our dataset
+	# pega os caminhos para as imagens de entrada no banco de dados
 	print("[INFO] quantifying faces...")
 	imagePaths = list(paths.list_images(args["dataset"]))
 
-	# initialize the list of known encodings
+	# inicializa a lista de codificações conhecidas
 	knownEncodings = []
 
-	# loop over the image paths
+	# loop sobre os caminhos das imagens
 	for (i, imagePath) in enumerate(imagePaths):
-		# load the input image and convert it from RGB (OpenCV ordering)
-		# to dlib ordering (RGB)
+		# carrega a imagem de entrada e converte ela de RGB (OpenCV ordering) para dlib ordering (RGB)
 		image = cv2.imread(imagePath)
 		rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-		# detect the (x, y)-coordinates of the bounding boxes
-		# corresponding to each face in the input image
+		# detecta as coordenadas(x, y) das caixas delimitadoras correspondentes a cada face na imagem de entrada
 		boxes = face_recognition.face_locations(rgb,
 			model=args["detection_method"])
 
-		# compute the facial embedding for the face
+		# cálculo do vetor referente a imagem
 		encodings = face_recognition.face_encodings(rgb, boxes)
 
-		# loop over the encodings
+		# loop sobre as codificações
 		for encoding in encodings:
-			# add each encoding to our set of known and
-			# encodings
+			# adiciona cada codificação ao conjunto de codificações conhecidas
 			knownEncodings.append(encoding)
 
-	# dump the facial encodings to disk
+	# grava as codificações faciais em disco
 	print("[INFO] serializing encodings...")
 	data = {"encodings": knownEncodings}
 	f = open(args["encodings"], "wb")
