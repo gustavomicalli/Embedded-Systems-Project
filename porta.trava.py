@@ -114,7 +114,7 @@ class Porta:
     def destravar(self):
 
         #Se o reconhecimento facial for positivo e o sensor capacitivo detectar o objeto porta
-        if self.reconhecimento.getEstado() == True and self.sensor.getEstado() == True:
+        if self.face_recognition.getEstado() == True and self.sensor.getEstado() == True:
 
             #Aciona o motor para abrir a trava   
             self.girarmotor+.setEstado(True)
@@ -123,6 +123,7 @@ class Porta:
             if self.sensor.getEstado() == True:
                 self.sensor.setEstado(False)
                 self.motor.setEstado(False)
+                self.__estadoPorta = True
                
     def travar(self):
 
@@ -136,5 +137,6 @@ class Porta:
             if self.sensor.getEstado() == False:
                 self.sensor.setEstado(True)
                 self.motor.setEstado(False)
+                self.__estadoPorta = False
 
     
