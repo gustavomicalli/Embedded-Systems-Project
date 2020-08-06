@@ -1,4 +1,4 @@
-# import the necessary packages
+# importa as bibliotecas necessárias
 from imutils.video import VideoStream
 import face_recognition
 import argparse
@@ -7,7 +7,7 @@ import pickle
 import time
 import cv2
 
-# construct the argument parser and parse the arguments
+# construção da analise de argumentos e analise
 ap = argparse.ArgumentParser()
 ap.add_argument("-e", "--encodings", required=True,
 	help="path to serialized db of facial encodings")
@@ -19,70 +19,63 @@ ap.add_argument("-d", "--detection-method", type=str, default="cnn",
 	help="face detection model to use: either `hog` or `cnn`")
 args = vars(ap.parse_args())
 
-# load the known faces and embeddings
+# carrega as faces conhecidas
 print("[INFO] loading encodings...")
 data = pickle.loads(open(args["encodings"], "rb").read())
 
-# initialize the video stream and pointer to output video file, then
-# allow the camera sensor to warm up
+# inicializa o vídeo e o ponteiro para gerar o arquivo de vídeo
 print("[INFO] starting video stream...")
 vs = VideoStream(src=0).start()
 writer = None
 time.sleep(2.0)
 
-# loop over frames from the video file stream
+# loop sobre os quadros do arquivo de vídeo
 while True:
-	# grab the frame from the threaded video stream
+	# pega o quadro do vídeo em questão
 	frame = vs.read()
 	
-	# convert the input frame from BGR to RGB then resize it to have
-	# a width of 750px (to speedup processing)
+	# converte o quadro de entrada de  BGR para RGB e o redimensiona para uma largura de 750 pixels(para aumentar a velocidade de processamento)
 	rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 	rgb = imutils.resize(frame, width=750)
 	r = frame.shape[1] / float(rgb.shape[1])
 
-	# detect the (x, y)-coordinates of the bounding boxes
-	# corresponding to each face in the input frame, then compute
-	# the facial embeddings for each face
+	#  detecta as coordenadas(x, y) das caixas delimitadoras correspondentes a cada face na imagem de entrada
 	boxes = face_recognition.face_locations(rgb,
 		model=args["detection_method"])
 	encodings = face_recognition.face_encodings(rgb, boxes)
 
-	# loop over the recognized faces
+	# loop sobre as faces reconhecidas
 	for (top, right, bottom, left) in zip(boxes):
-		# rescale the face coordinates
+		# redimensiona as coordenadas do rosto
 		top = int(top * r)
 		right = int(right * r)
 		bottom = int(bottom * r)
 		left = int(left * r)
 
-	# if the video writer is None *AND* we are supposed to write
-	# the output video to disk initialize the writer
+	# se a câmera tiver saída nula e deve-se gravar o vídeo de saída em disco, inicializa a câmera
 	if writer is None and args["output"] is not None:
 		fourcc = cv2.VideoWriter_fourcc(*"MJPG")
 		writer = cv2.VideoWriter(args["output"], fourcc, 20,
 			(frame.shape[1], frame.shape[0]), True)
 
-	# if the writer is not None, write the frame with recognized
-	# faces to disk
+	# se a câmera não tiver saída nula, gravar o quadro com face reconhecida no banco de dados
 	if writer is not None:
 		writer.write(frame)
 
-	# check to see if we are supposed to display the output frame to
-	# the screen
+        #verifica se o quadro de saída deve ser exibido para a tela
 	if args["display"] > 0:
 		cv2.imshow("Frame", frame)
 		key = cv2.waitKey(1) & 0xFF
 		print("[INFO] Successful Acess!")
 
-		# if the `q` key was pressed, break from the loop
+		# se a tecla 'q' for pressionada, sai do loop
 		if key == ord("q"):
 			break
 
-# do a bit of cleanup
+# limpeza
 cv2.destroyAllWindows()
 vs.stop()
 
-# check to see if the video writer point needs to be released
+# verificar se o gravador de vídeo precisa ser liberado
 if writer is not None:
 	writer.release()
