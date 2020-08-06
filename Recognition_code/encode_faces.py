@@ -40,7 +40,7 @@ for (i, imagePath) in enumerate(imagePaths):
 
 	# loop over the encodings
 	for encoding in encodings:
-		# add each encoding + name to our set of known names and
+		# add each encoding to our set of known and
 		# encodings
 		knownEncodings.append(encoding)
 
