@@ -45,16 +45,16 @@ Classe responsável pela definição do motor
         self.angle = 0
         self.steps_per_rev = steps_per_rev
         
-        # Initialize stepping mode
+        # Inicializa o stepping mode
         self.drivemode = fullstep
     
     def rotate(self, degrees=360, rpm=15):
         step = 0
         
-        # Calculate time between steps in seconds
+        # Calcula o tempo entre steps em segundos
         wait_time = 60.0/(self.steps_per_rev*rpm)
         
-        # Convert degrees to steps
+        # Converte graus para steps
         steps = math.fabs(degrees*self.steps_per_rev/360.0)
         self.direction = 1
         
@@ -83,18 +83,13 @@ def main():
     stepper = Stepper()
     stepper.rotate()
     
-
-if __name__ == "__main__":
-    main()
-
-    
 class Sensor:
     """
     Classe responsável pela definição do sensor
     """
 
     def __init__(self):
-        #Sem presença = False / Presença = True
+        #Sem aproximação = False / Distância < 15mm = True
         self.__estado = False
 
 
@@ -109,5 +104,37 @@ class Porta:
     """
     Classe responsável pela definição da porta do cofre
     """
-    
+    def __init__(self, motor, sensor):
+        self.sensor = sensor
+        self.motor = motor
+        
+        #Fechada = False / Aberta = True
+        self.__estadoPorta = False
+        
+    def destravar(self):
+
+        #Se o reconhecimento facial for positivo e o sensor capacitivo detectar o objeto porta
+        if self.reconhecimento.getEstado() == True and self.sensor.getEstado() == True:
+
+            #Aciona o motor para abrir a trava   
+            self.girarmotor+.setEstado(True)
+     
+            #Atualiza o sensor
+            if self.sensor.getEstado() == True:
+                self.sensor.setEstado(False)
+                self.motor.setEstado(False)
+               
+    def travar(self):
+
+        #Se o sensor capacitivo indicar presença (detectar o objeto porta)
+        if self.sensor.getEstado() == True:
+
+            #Aciona o motor para fechar a trava   
+            self.girarmotor-.setEstado(True)
+     
+            #Atualiza o sensor
+            if self.sensor.getEstado() == False:
+                self.sensor.setEstado(True)
+                self.motor.setEstado(False)
+
     
